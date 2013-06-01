@@ -1,0 +1,272 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E99632321759FF0B009BA03D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E99632311759FF0B009BA03D /* Foundation.framework */; };
+		E99632481759FF52009BA03D /* DiskScan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E99632401759FF52009BA03D /* DiskScan.cpp */; };
+		E99632491759FF52009BA03D /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = E99632431759FF52009BA03D /* main.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E996322C1759FF0B009BA03D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E996322E1759FF0B009BA03D /* HFSPlusDiskHex */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HFSPlusDiskHex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E99632311759FF0B009BA03D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E99632371759FF0B009BA03D /* HFSPlusDiskHex-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HFSPlusDiskHex-Prefix.pch"; sourceTree = "<group>"; };
+		E99632401759FF52009BA03D /* DiskScan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DiskScan.cpp; sourceTree = "<group>"; };
+		E99632411759FF52009BA03D /* DiskScan.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DiskScan.hh; sourceTree = "<group>"; };
+		E99632421759FF52009BA03D /* PartitionTypeGUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartitionTypeGUID.h; sourceTree = "<group>"; };
+		E99632431759FF52009BA03D /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		E99632451759FF52009BA03D /* VolumeScan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeScan.h; sourceTree = "<group>"; };
+		E99632471759FF52009BA03D /* DiskRead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskRead.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E996322B1759FF0B009BA03D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E99632321759FF0B009BA03D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E99632251759FF0B009BA03D = {
+			isa = PBXGroup;
+			children = (
+				E99632331759FF0B009BA03D /* HFSPlusDiskHex */,
+				E99632301759FF0B009BA03D /* Frameworks */,
+				E996322F1759FF0B009BA03D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E996322F1759FF0B009BA03D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E996322E1759FF0B009BA03D /* HFSPlusDiskHex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E99632301759FF0B009BA03D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E99632311759FF0B009BA03D /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E99632331759FF0B009BA03D /* HFSPlusDiskHex */ = {
+			isa = PBXGroup;
+			children = (
+				E996323F1759FF52009BA03D /* ScanDisk */,
+				E99632431759FF52009BA03D /* main.mm */,
+				E99632441759FF52009BA03D /* ScanVolume */,
+				E99632471759FF52009BA03D /* DiskRead.h */,
+				E99632361759FF0B009BA03D /* Supporting Files */,
+			);
+			path = HFSPlusDiskHex;
+			sourceTree = "<group>";
+		};
+		E99632361759FF0B009BA03D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E99632371759FF0B009BA03D /* HFSPlusDiskHex-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E996323F1759FF52009BA03D /* ScanDisk */ = {
+			isa = PBXGroup;
+			children = (
+				E99632401759FF52009BA03D /* DiskScan.cpp */,
+				E99632411759FF52009BA03D /* DiskScan.hh */,
+				E99632421759FF52009BA03D /* PartitionTypeGUID.h */,
+			);
+			path = ScanDisk;
+			sourceTree = "<group>";
+		};
+		E99632441759FF52009BA03D /* ScanVolume */ = {
+			isa = PBXGroup;
+			children = (
+				E99632451759FF52009BA03D /* VolumeScan.h */,
+			);
+			path = ScanVolume;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E996322D1759FF0B009BA03D /* HFSPlusDiskHex */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E996323C1759FF0B009BA03D /* Build configuration list for PBXNativeTarget "HFSPlusDiskHex" */;
+			buildPhases = (
+				E996322A1759FF0B009BA03D /* Sources */,
+				E996322B1759FF0B009BA03D /* Frameworks */,
+				E996322C1759FF0B009BA03D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HFSPlusDiskHex;
+			productName = HFSPlusDiskHex;
+			productReference = E996322E1759FF0B009BA03D /* HFSPlusDiskHex */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E99632261759FF0B009BA03D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = pagict;
+			};
+			buildConfigurationList = E99632291759FF0B009BA03D /* Build configuration list for PBXProject "HFSPlusDiskHex" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E99632251759FF0B009BA03D;
+			productRefGroup = E996322F1759FF0B009BA03D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E996322D1759FF0B009BA03D /* HFSPlusDiskHex */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E996322A1759FF0B009BA03D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E99632481759FF52009BA03D /* DiskScan.cpp in Sources */,
+				E99632491759FF52009BA03D /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E996323A1759FF0B009BA03D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E996323B1759FF0B009BA03D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E996323D1759FF0B009BA03D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HFSPlusDiskHex/HFSPlusDiskHex-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E996323E1759FF0B009BA03D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HFSPlusDiskHex/HFSPlusDiskHex-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E99632291759FF0B009BA03D /* Build configuration list for PBXProject "HFSPlusDiskHex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E996323A1759FF0B009BA03D /* Debug */,
+				E996323B1759FF0B009BA03D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E996323C1759FF0B009BA03D /* Build configuration list for PBXNativeTarget "HFSPlusDiskHex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E996323D1759FF0B009BA03D /* Debug */,
+				E996323E1759FF0B009BA03D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E99632261759FF0B009BA03D /* Project object */;
+}
