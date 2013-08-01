@@ -6,7 +6,7 @@
 // Copyright (c) 2013Äê pagict. All rights reserved.
 //
 
-#include "DiskRead.h"
+#include "../DiskRead.h"
 #include "DiskScan.hh"
 #include "PartitionTypeGUID.h"
 #include <cstdio>
@@ -41,19 +41,19 @@ void  formatGUID(const char buf[16], std::string& str)
     unsigned short _3;
     
     memcpy(&_1, buf+0, sizeof(int));
-    char _1Str[8];
+    char _1Str[9];
     sprintf(_1Str, "%08X", _1);
     str.append(_1Str);
     str.append("-");
     
     memcpy(&_2, buf+4, sizeof(short));
-    char _2Str[4];
+    char _2Str[5];
     sprintf(_2Str, "%04X",_2);
     str.append(_2Str);
     str.append("-");
     
     memcpy(&_3, buf+6, sizeof(short));
-    char _3Str[4];
+    char _3Str[5];
     sprintf(_3Str, "%04X", _3);
     str.append(_3Str);
     str.append("-");

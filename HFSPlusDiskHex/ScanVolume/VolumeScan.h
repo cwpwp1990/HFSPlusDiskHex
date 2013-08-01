@@ -10,6 +10,8 @@
 #define HFSPlusDiskHex_VolumeScan_h
 
 #import <Foundation/Foundation.h>
+#include <stdio.h>
 
+int    getVolumeHeader(FILE* p_file, unsigned long startOffset, HFSPlusVolumeHeader* p_volumeHeader);
 
 #endif

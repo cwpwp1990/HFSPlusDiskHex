@@ -14,14 +14,21 @@
 
 std::vector<std::string> diskList;
 
-void
-printPrompt() {
-}
+const std::string Unit[] = {"Byte(s)", "KiloByte(s)", "MegaByte(s)", "GigaByte(s)", "TidaByte(s)"};
 
-void
-diskPrompt() {
+inline std::string convertByteUnit(unsigned long szInByte)
+{
+    int i=0;
+    float tmp = szInByte;
+    while( tmp > 1024) {
+        tmp = tmp / 1024;
+        i++;
+    }
+    
+    char buf[64];
+    sprintf(buf,"%f ", tmp);
+    return std::string(buf)+Unit[i];
 }
-
 
 
 int main(int argc, const char * argv[])
@@ -40,18 +47,29 @@ int main(int argc, const char * argv[])
         }
     }
     printf("\n");
-    
+    const char* diskName;
+
+#ifdef DEBUG
+    diskName = "/Users/pengpagict/Documents/pseuDisk.dmg";
+    //diskName = "/dev/disk3";
+#endif
+    int select;
+#ifdef RELEASE
     char ch = getchar();
-    int select = atoi(&ch);
-    enum PartitionType type=partitionTable(diskList.at(select).c_str());
-    printf("scaning device %s... ...\n", diskList.at(select).c_str());
+    select = atoi(&ch);
+    diskName = diskList.at(select).c_str();
+#endif
+    
+    enum PartitionType type=partitionTable(diskName);
+
+    printf("scaning device %s... ...\n", diskName);
     
     PartitionItemList partitionList;
     if (type==GPT) {
         printf("The Partiton table Type is GPT. ");
         printf("The Partiton information are listed below:\n");
         GPTHeader hder;
-        scanGPTTable(diskList.at(select).c_str(), partitionList, hder);
+        scanGPTTable(diskName, partitionList, hder);
     }
     else if (type==MBR) {
         //scanMBRTable(diskList.at(ch));
@@ -61,10 +79,28 @@ int main(int argc, const char * argv[])
         printf("Volume(%d):",index);
         printf("\t\t\tType:%-15s",(*it).partitionType.c_str());
         printf("\t\t\tName:%-18s", it->partitionName.c_str());
-        printf("\t\t\tSize in Byte:%lu", it->volumeSzByte);
+        printf("\t\t\tSize:%s", convertByteUnit(it->volumeSzByte).c_str());
         printf("\n");
     }
+    printf("select volume number to check:...\n");
     
+    long start_offset;
+    
+#ifdef RELEASE
+    ch = getchar();
+    select = atoi(&ch);
+#endif
+
+#ifdef DEBUG
+    select = 1;
+#endif
+    
+    
+    start_offset = partitionList.at(select).startLBA;
+    
+    FILE* p_file = fopen(diskName, "rb");
+    HFSPlusVolumeHeader volumeHeader;
+    getVolumeHeader(p_file,start_offset, &volumeHeader);
     return 0;
 }
 
