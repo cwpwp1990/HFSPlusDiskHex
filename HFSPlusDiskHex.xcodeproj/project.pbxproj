@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E97494D5175A234000F2D4E7 /* VolumeScan.mm in Sources */ = {isa = PBXBuildFile; fileRef = E97494D4175A234000F2D4E7 /* VolumeScan.mm */; };
 		E99632321759FF0B009BA03D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E99632311759FF0B009BA03D /* Foundation.framework */; };
 		E99632481759FF52009BA03D /* DiskScan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E99632401759FF52009BA03D /* DiskScan.cpp */; };
 		E99632491759FF52009BA03D /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = E99632431759FF52009BA03D /* main.mm */; };
@@ -25,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E97494D4175A234000F2D4E7 /* VolumeScan.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VolumeScan.mm; sourceTree = "<group>"; };
 		E996322E1759FF0B009BA03D /* HFSPlusDiskHex */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HFSPlusDiskHex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E99632311759FF0B009BA03D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E99632371759FF0B009BA03D /* HFSPlusDiskHex-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HFSPlusDiskHex-Prefix.pch"; sourceTree = "<group>"; };
@@ -76,10 +78,10 @@
 		E99632331759FF0B009BA03D /* HFSPlusDiskHex */ = {
 			isa = PBXGroup;
 			children = (
-				E996323F1759FF52009BA03D /* ScanDisk */,
-				E99632431759FF52009BA03D /* main.mm */,
-				E99632441759FF52009BA03D /* ScanVolume */,
 				E99632471759FF52009BA03D /* DiskRead.h */,
+				E99632431759FF52009BA03D /* main.mm */,
+				E996323F1759FF52009BA03D /* ScanDisk */,
+				E99632441759FF52009BA03D /* ScanVolume */,
 				E99632361759FF0B009BA03D /* Supporting Files */,
 			);
 			path = HFSPlusDiskHex;
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				E99632451759FF52009BA03D /* VolumeScan.h */,
+				E97494D4175A234000F2D4E7 /* VolumeScan.mm */,
 			);
 			path = ScanVolume;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			files = (
 				E99632481759FF52009BA03D /* DiskScan.cpp in Sources */,
 				E99632491759FF52009BA03D /* main.mm in Sources */,
+				E97494D5175A234000F2D4E7 /* VolumeScan.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +222,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;

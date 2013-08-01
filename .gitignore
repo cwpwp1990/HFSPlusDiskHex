@@ -2,3 +2,6 @@
 HFSPlusDiskHex/.DS_Store
 HFSPlusDiskHex/HFSPlusDiskHex.1
 HFSPlusDiskHex/HFSPlusDiskHex-Prefix.pch
+./*.DS_Store
+xcuserdata
+HFSPlusDiskHex/makefile
